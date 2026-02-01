@@ -2,18 +2,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Praveen-deploy
+  name: praveen-deploy
   labels:
-    app: Praveen-deploy-lbl
+    app: praveen-deploy-lbl
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: Praveen-app
+      app: praveen-app
   template:
     metadata:
       labels:
-        app: Praveen-app
+        app: praveen-app
     spec:
       containers:
       - name: praveen-container
@@ -24,12 +24,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: Praveen-np-service
+  name: praveen-np-service
   labels:
-    app: Praveen-app
+    app: praveen-app
 spec:
   selector:
-    app: Praveen-deploy-lbl
+    app: praveen-deploy-lbl
 
   type: NodePort
   ports:
