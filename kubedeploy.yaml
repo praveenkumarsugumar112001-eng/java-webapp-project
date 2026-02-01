@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: praveen-container
-        image: praveenkumar112001/praveendocker:v1.0
+        image: praveenkumar112001/praveendocker:v2.0
         ports:
         - containerPort: 8080
 ---
